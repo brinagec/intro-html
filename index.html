@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My GCP Fundamentals Course</title>
+    <style>
+      body {
+        width: 35em !important;
+        margin: 0 auto !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+    </style>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  </head>
+  <body>
+      <header><picture><img src= "https://avatars.githubusercontent.com/u/42210780?v=4"></picture></header>
+    <h1>Fundamental  GCP ommands</h1>
+    <h2>Follow these Qwiklabs for practice</h2>
+    <ol>
+      <li>
+        <a href="https://plrsig.ht/37N1K7w">
+          Get Started with Google Cloud Marketplace
+        </a>
+      </li>
+      <li>
+        <a href="https://plrsig.ht/2Sb6FZv">
+          Get Started with Google Cloud Commpute Engine @ PluraSight
+        </a>
+      </li>
+      <li>
+        <a href="https://lab.github.com/githubtraining/introduction-to-html">
+        Get Started with HTML @ GitHub Learning Lab
+         </a>
+      </li>
+    </ol>
+    <br />
+    <h2>GCP Commands for Cloud Shell</h2>
+    <table class="border border-dark">
+      <thead>
+        <tr>
+          <td>GCP Command</td>
+          <td>Command Meaning</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>gcloud compute zone list | grep us-central1</td>
+          <td>
+            used to display the list of zones close to the zone us-central1
+          </td>
+        </tr>
+        <tr>
+          <td>gcloud config set compute/zone us-central1-c</td>
+          <td>configure and set the default zone to us-central1-c</td>
+        </tr>
+        <tr>
+          <td>gcloud compute instances create "my-vm-2" /</td>
+          <td>
+            create a virtual machine called my-vm-2 and will be connected to the
+            default subnet
+          </td>
+        </tr>
+        <tr>
+          <td>exit</td>
+          <td>close the cloud shell /console</td>
+        </tr>
+        <tr>
+          <td>ping my-vm-1</td>
+          <td>enter into my-vm-1</td>
+        </tr>
+        <tr>
+          <td>ssh my-vm-1</td>
+          <td>log in to my-vm-1</td>
+        </tr>
+        <tr>
+          <td>sudo apt-get install nginx-light -y</td>
+          <td>
+            installs a simple web server on my-vm-1 since it is the one you are
+            logged in
+          </td>
+        </tr>
+        <tr>
+          <td>sudo nano /var/www/html/index.nginx-debian.html</td>
+          <td>
+            edit the index.html document using the nano editor | you can use the
+            editor of your choice ie vim or code
+          </td>
+        </tr>
+        <tr>
+          <td>clear</td>
+          <td>unclutter the console | clean the console</td>
+        </tr>
+        <tr>
+          <td>curl http://localhost/</td>
+          <td>view the code of the web page in the console</td>
+        </tr>
+        <tr>
+          <td>exit</td>
+          <td>logout from my-vm-1</td>
+        </tr>
+        <tr>
+          <td>curl http://my-vm-1/</td>
+          <td>
+            check if you are able to view the code of your website from my-vm-2
+            machine
+          </td>
+        </tr>
+        <tr>
+          <td>exit</td>
+          <td>close the cloud shell /console</td>
+        </tr>
+      </tbody>
+    </table>
+    <br />
+    <h2>Follow these Commands for Docker Practice</h2>
+    <table class="border border-dark">
+      <thead>
+        <tr>
+          <td>Command</td>
+          <td>Meaning</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>yum install docker -y</td>
+          <td>use to install docker on a linux machine and yum is for centos machine</td>
+        </tr>
+        <tr>
+            <td>image</td>
+            <td>Static files for an operating machine</td>
+        </tr>
+        <tr>
+            <td>instance</td>
+            <td>an actvie operating machine or running image</td>
+        </tr>
+        <tr>
+            <td>docker pull ubuntu</td>
+            <td>The command telling docker to get an image of ubuntu from docker library</td>
+        </tr>
+        <tr>
+            <td>docker run -it --name pghlibrary ubuntu</td>
+            <td>Telling docker to run the ubuntu image in the interactive terminal of the container using the name pghlibrary.
+                This is the simplest command for creating a container, that is an environment for creating applications, services and files
+            </td>
+          </tr>
+          <tr>
+            <td>ls</td>
+            <td>You can list the files found in the instance of ubuntu you are running ontop of docker</td>
+          </tr>
+          <tr>
+            <td>touch soup.docx myresearch.docx</td>
+            <td>Using the touch command inside ubuntu instance to create two files soup.docx and myresearch.docx</td>
+          </tr>
+          <tr>
+            <td>apt-get update -y</td>
+            <td>It will update the repository for the ubuntu instance pghlibrary</td>
+          </tr>
+          <tr>
+            <td>docker ps -a</td>
+            <td>To check the container details, memory, ip address</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>A developer has asked you to create a development environment for developing an application- WP, DB and php Admin
+            </td>
+          </tr>
+          <tr>
+            <td> docker-compose --version</td>
+            <td>To check version of docker compose, which is a tool for creating multiple instances of conterners on docker</td>
+          </tr>
+          <tr>
+            <td>vim docker-compose.yml</td>
+            <td>Create and edit the yml file
+                mydb:
+                   image: mariadb
+                   environment: 
+                     MYSQL_ROOT_PASSWORD: babatea
+                mywordpress:
+                   image: wordpress
+                   ports:
+                     - 8989:80
+                   links:
+                     - mydb: mysql
+                
+                phpadmin:
+                image: corbinu/docker-phpadmin
+                ports:
+                 - 8181: 80
+                links:
+                 - mydb: mysql
+                
+                environment:
+                 MYSQL_USERNAME: root
+                 MYSQL_ROOT_PASSWORD: babatea
+            </td>
+          </tr>
+          <tr>
+            <td> docker-compose up -d</td>
+            <td>To check the docker-compose.yml file and start the commands inside this file(run).
+                The environment will be created simply this way in the detached mode, that is,
+            all the three images will be pulled, mariadb, wordpress and corbinu/docker-phpadmin</td>
+          </tr>
+          <tr>
+            <td> docker images</td>
+            <td>To check all the docker images(containers) in the the ship</td>
+          </tr>
+          <tr>
+            <td> docker ps -a</td>
+            <td>To check details of the images in the docker </td>
+          </tr>
+          <tr>
+            <td> docker-compose down</td>
+            <td>To stop and delete the container use down, or else use docker-compose stop , just to stp them</td>
+          </tr>
+          <tr>
+            <td> docker rm -f pghlibrary </td>
+            <td>To delete the container not created by docker-compose.
+                To clear memory use docker rmi or docker system prune --all -y , this will clean up the entire images
+            </td>
+          </tr>
+      </tbody>
+    </table>
+    <br />
+    <h2>Commands for Top Challenges in the Computer World</h2>
+    <table class="border border-dark">
+      <thead>
+        <tr>
+          <td>Command</td>
+          <td>Command Meaning</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>lsblk</td>
+          <td>
+            Used to display the list of drives in your machine
+          </td>
+        </tr>
+        <tr>
+          <td>dd if= /dev/zero of= /dev/sdX bs=1M count=10
+            <em>dd if=/dev/zero of=/dev/sdX  bs=1M count=10</em> 
+          </td>
+          <td>Used to prepare a flash drive for other uses. The dd command cleans off the MBR,
+              including partition table. Substitute X for the drive you would like to clear. Solution for locked disk.
+          </td>
+        </tr>
+        <tr>
+          <td>gcloud compute instances create "my-vm-2" /</td>
+          <td>
+            create a virtual machine called my-vm-2 and will be connected to the
+            default subnet
+          </td>
+        </tr>
+        <tr>
+          <td>exit</td>
+          <td>close the cloud shell /console</td>
+        </tr>
+        <tr>
+          <td>ping my-vm-1</td>
+          <td>enter into my-vm-1</td>
+        </tr>
+        <tr>
+          <td>ssh my-vm-1</td>
+          <td>log in to my-vm-1</td>
+        </tr>
+        <tr>
+          <td>sudo apt-get install nginx-light -y</td>
+          <td>
+            installs a simple web server on my-vm-1 since it is the one you are
+            logged in
+          </td>
+        </tr>
+        <tr>
+          <td>sudo nano /var/www/html/index.nginx-debian.html</td>
+          <td>
+            edit the index.html document using the nano editor | you can use the
+            editor of your choice ie vim or code
+          </td>
+        </tr>
+        <tr>
+          <td>clear</td>
+          <td>unclutter the console | clean the console</td>
+        </tr>
+        <tr>
+          <td>curl http://localhost/</td>
+          <td>view the code of the web page in the console</td>
+        </tr>
+        <tr>
+          <td>exit</td>
+          <td>logout from my-vm-1</td>
+        </tr>
+        <tr>
+          <td>curl http://my-vm-1/</td>
+          <td>
+            check if you are able to view the code of your website from my-vm-2
+            machine
+          </td>
+        </tr>
+        <tr>
+          <td>exit</td>
+          <td>close the cloud shell /console</td>
+        </tr>
+      </tbody>
+    </table>
+    <p><em>Thank you for using my site!</em></p>
+  </body>
+</html>
