@@ -24,7 +24,7 @@ body:after {
     font-size: 10pt;
 }
 
-h1 {
+header, h1 {
     grid-row-start: 1;
     grid-column-start: 1;
     grid-column-end: 3;
